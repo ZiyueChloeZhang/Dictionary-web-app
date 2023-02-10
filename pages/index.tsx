@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Logo from '../public/images/logo.svg';
 import ArrowIcon from '../public/images/icon-arrow-down.svg';
 import Moon from '../public/images/icon-moon.svg';
-import ToggleSwitch from '../components/ToggleSwicth';
+import ToggleSwitch from '../components/ThemeToggle';
 import React, { useContext, useState } from 'react';
 import ThemeContext from '../contexts/ThemeContext';
 

@@ -1,7 +1,7 @@
 import { FC, useContext } from "react";
 import ThemeContext from "../contexts/ThemeContext";
 
-const ToggleSwitch: FC = () => {
+const ThemeToggle: FC = () => {
     const { toggleTheme } = useContext(ThemeContext);
 
     return (
@@ -17,4 +17,4 @@ const ToggleSwitch: FC = () => {
 
 }
 
-export default ToggleSwitch;
+export default ThemeToggle;
