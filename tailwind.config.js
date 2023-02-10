@@ -34,8 +34,7 @@ module.exports = {
       inconsolata: "Inconsolata",
       inter: "Inter",
       lora: "Lora",
-    },
-    extend: {},
+    }
   },
   plugins: [],
 };

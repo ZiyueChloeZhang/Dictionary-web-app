@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             <Logo />
             <div className='flex flex-row'>
               <div className='flex justify-center items-center'>
-                <span className='font-bold px-2 text-light-primary text-black-200 dark:text-white transition-all duration-500'>Sans Serif</span>
+                <span className='font-bold px-2 text-light-primary text-black-200 dark:text-white'>Sans Serif</span>
                 <div className="px-2">
                   <ArrowIcon />
                 </div>
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
               <div id='vertical-divider' className='border-r border-gray mx-5 h-8' />
               <div className='flex items-center'>
                 <ToggleSwitch />
-                <Moon className={`ml-5 dark:text-purple text-gray-300 transition-all duration-500`} />
+                <Moon className={`ml-5 dark:text-purple text-gray-300`} />
               </div>
             </div>
           </div>
