@@ -31,10 +31,10 @@ module.exports = {
       xl: ["64px", { lineHeight: "77px" }],
     },
     fontFamily: {
-      inconsolata: "Inconsolata",
-      inter: "Inter",
-      lora: "Lora",
-    }
+      mono: "Inconsolata",
+      "sans-serif": "Inter",
+      self: "Lora",
+    },
   },
   plugins: [],
 };
