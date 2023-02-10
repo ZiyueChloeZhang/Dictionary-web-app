@@ -5,7 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     colors: {
       black: {
@@ -22,7 +22,12 @@ module.exports = {
       white: "#FFFFFF",
       purple: "#A445ED",
       red: "#FF5252",
-    }
+    },
+    fontFamily: {
+      inconsolata: "Inconsolata",
+      inter: "Inter",
+      lora: "Lora",
+    },
   },
   plugins: [],
 };

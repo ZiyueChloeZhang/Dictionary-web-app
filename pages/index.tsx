@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   const { isDark } = useContext(ThemeContext);
 
   return (
-    <div className={`${isDark ? 'dark' : ''}`}>
+    <div className={`${isDark ? 'dark' : ''} font-inter`}>
       <div className=' dark:bg-black-400 w-screen h-screen transition-all duration-500'>
         <Head>
           <title>Dictionary</title>
