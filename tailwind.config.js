@@ -23,11 +23,19 @@ module.exports = {
       purple: "#A445ED",
       red: "#FF5252",
     },
+    fontSize: {
+      xs: ["14px", { lineHeight: "17px" }],
+      s: ["18px", { lineHeight: "24px" }],
+      m: ["20px", { lineHeight: "24px" }],
+      l: ["24px", { lineHeight: "29px" }],
+      xl: ["64px", { lineHeight: "77px" }],
+    },
     fontFamily: {
       inconsolata: "Inconsolata",
       inter: "Inter",
       lora: "Lora",
     },
+    extend: {},
   },
   plugins: [],
 };
