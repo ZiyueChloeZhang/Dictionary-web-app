@@ -5,29 +5,24 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     colors: {
-      black: "#2D2D2D",
+      black: {
+        400: "#050505",
+        300: "#1F1F1F",
+        200: "#2D2D2D",
+        100: "#3A3A3A",
+      },
+      gray: {
+        300: "#757575",
+        200: "#E9E9E9",
+        100: "#F4F4F4",
+      },
       white: "#FFFFFF",
-      gray: "#E9E9E9",
-      "gray-dark": "#757575",
       purple: "#A445ED",
-    },
-    fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
-    },
-    extend: {
-      width: {
-        "14px": "14px",
-      },
-      height: {
-        "14px": "14px",
-      },
-      padding: {
-        "3px": "3px",
-      },
-    },
+      red: "#FF5252",
+    }
   },
   plugins: [],
 };
