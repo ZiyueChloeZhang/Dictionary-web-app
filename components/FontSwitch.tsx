@@ -24,17 +24,20 @@ const FontSwitch: FC = () => {
                 </Menu.Button>
             </div>
 
-            <Menu.Items className="absolute z-10 mt-2 w-[183px] origin-top-right rounded-2xl shadow-sm bg-white">
+            <Menu.Items className="absolute z-10 mt-2 w-[183px] origin-top-right rounded-2xl shadow-sm dark:shadow-purple bg-white dark:bg-black-300
+            ">
                 <div className="px-4 py-4">
                     {FontNames.map((name) => (
                         <Menu.Item key={name}>
                             {({ active }) => (
-                                <button className={`${active && 'text-purple'} block py-2 text-sm font-${kebabCase(name)} font-bold`}
-                                    name={name}
-                                    onClick={handleClick}
-                                >
-                                    {name}
-                                </button>
+                                <div className="text-black-200 dark:text-white">
+                                    <button className={`${active && 'text-purple'} block py-2 text-sm font-${kebabCase(name)} font-bold`}
+                                        name={name}
+                                        onClick={handleClick}
+                                    >
+                                        {name}
+                                    </button>
+                                </div>
                             )}
                         </Menu.Item>
                     ))}
