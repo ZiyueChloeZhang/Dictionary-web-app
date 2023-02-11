@@ -5,7 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     colors: {
       black: {
@@ -22,6 +22,21 @@ module.exports = {
       white: "#FFFFFF",
       purple: "#A445ED",
       red: "#FF5252",
+    },
+    fontSize: {
+      xs: ["14px", { lineHeight: "17px" }],
+      sm: ["18px", { lineHeight: "24px" }],
+      md: ["20px", { lineHeight: "24px" }],
+      lg: ["24px", { lineHeight: "29px" }],
+      xl: ["64px", { lineHeight: "77px" }],
+    },
+    fontFamily: {
+      mono: "Inconsolata",
+      "sans-serif": "Inter",
+      serif: "Lora",
+    },
+    boxShadow: {
+      sm: '0 5px 30px rgba(0, 0, 0, 0.1)',
     }
   },
   plugins: [],

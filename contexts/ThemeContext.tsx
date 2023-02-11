@@ -5,11 +5,13 @@ interface IThemeContext {
     toggleTheme?: () => void;
 }
 
-export const defaultTheme: IThemeContext = {
+const defaultTheme: IThemeContext = {
     isDark: false
-}
+} as const;
 
 const ThemeContext = React.createContext<IThemeContext>(defaultTheme);
+export default ThemeContext;
+
 
 interface IThemeProviderProp {
     children?: React.ReactNode
@@ -19,7 +21,6 @@ export const ThemeProvider: FC<IThemeProviderProp> = ({ children }) => {
     const [isDark, setIsDark] = useState(defaultTheme.isDark);
 
     const toggleTheme = () => {
-        console.log('toggles');
         setIsDark((isDark) => !isDark)
     }
 
@@ -29,9 +30,6 @@ export const ThemeProvider: FC<IThemeProviderProp> = ({ children }) => {
         </ThemeContext.Provider>
     )
 }
-
-export default ThemeContext;
-
 
 
 
