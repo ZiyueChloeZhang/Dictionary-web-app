@@ -1,11 +1,17 @@
 import { FC, useContext } from "react";
-import FontContext, { FontNames } from "../contexts/FontContext";
+import FontContext, { FontName, FontNames } from "../contexts/FontContext";
 import ArrowIcon from '../public/images/icon-arrow-down.svg';
 import { Menu } from '@headlessui/react';
 import { kebabCase } from "lodash";
 
 const FontSwitch: FC = () => {
-    const { fontName } = useContext(FontContext);
+    const { fontName, switchFont } = useContext(FontContext);
+
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        const button: HTMLButtonElement = event.currentTarget;
+        const fontName: FontName = button.name as FontName;
+        switchFont(fontName);
+    };
 
     return (
         <Menu as='div' className="inline-block text-left self-center z-10">
@@ -21,13 +27,15 @@ const FontSwitch: FC = () => {
             <Menu.Items className="absolute z-10 mt-2 w-[183px] origin-top-right rounded-2xl shadow-sm bg-white">
                 <div className="px-4 py-4">
                     {FontNames.map((name) => (
-                        <Menu.Item>
+                        <Menu.Item key={name}>
                             {({ active }) => (
-                                <button className={`${active && 'text-purple'} block py-2 text-sm font-${kebabCase(name)} font-bold`}>
+                                <button className={`${active && 'text-purple'} block py-2 text-sm font-${kebabCase(name)} font-bold`}
+                                    name={name}
+                                    onClick={handleClick}
+                                >
                                     {name}
                                 </button>
                             )}
-
                         </Menu.Item>
                     ))}
                 </div>

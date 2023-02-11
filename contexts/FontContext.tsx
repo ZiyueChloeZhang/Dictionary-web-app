@@ -1,15 +1,16 @@
 import { createContext, FC, useState } from "react";
 
 export const FontNames = ["Sans Serif", "Serif", "Mono"] as const;
-type FontName = typeof FontNames[number];
+export type FontName = typeof FontNames[number];
 
 interface IFontContext {
     fontName: FontName,
-    swithFont?: (name: FontName) => void
+    switchFont: (name: FontName) => void
 }
 
 const defaultFont: IFontContext = {
-    fontName: "Sans Serif"
+    fontName: "Sans Serif",
+    switchFont: (name:FontName) => {}
 } as const;
 
 const FontContext = createContext<IFontContext>(defaultFont);
@@ -22,12 +23,12 @@ interface IFontProviderProp {
 export const FontProvider: FC<IFontProviderProp> = ({ children }) => {
     const [fontName, setFont] = useState(defaultFont.fontName);
 
-    const swithFont = (fontName: FontName) => {
+    const switchFont = (fontName: FontName) => {
         setFont(fontName)
     }
 
     return (
-        <FontContext.Provider value={{ fontName, swithFont }}>
+        <FontContext.Provider value={{ fontName, switchFont }}>
             {children}
         </FontContext.Provider>
     )
