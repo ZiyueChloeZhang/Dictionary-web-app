@@ -25,16 +25,19 @@ module.exports = {
     },
     fontSize: {
       xs: ["14px", { lineHeight: "17px" }],
-      s: ["18px", { lineHeight: "24px" }],
-      m: ["20px", { lineHeight: "24px" }],
-      l: ["24px", { lineHeight: "29px" }],
+      sm: ["18px", { lineHeight: "24px" }],
+      md: ["20px", { lineHeight: "24px" }],
+      lg: ["24px", { lineHeight: "29px" }],
       xl: ["64px", { lineHeight: "77px" }],
     },
     fontFamily: {
       mono: "Inconsolata",
       "sans-serif": "Inter",
-      self: "Lora",
+      serif: "Lora",
     },
+    boxShadow: {
+      sm: '0 5px 30px rgba(0, 0, 0, 0.1)',
+    }
   },
   plugins: [],
 };

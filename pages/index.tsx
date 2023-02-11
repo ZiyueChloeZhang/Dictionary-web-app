@@ -6,28 +6,24 @@ import Moon from '../public/images/icon-moon.svg';
 import ToggleSwitch from '../components/ThemeToggle';
 import React, { useContext, useState } from 'react';
 import ThemeContext from '../contexts/ThemeContext';
+import FontSwitch from '../components/FontSwitch';
 
 
 const Home: NextPage = () => {
   const { isDark } = useContext(ThemeContext);
 
   return (
-    <div className={`${isDark ? 'dark' : ''} font-inter`}>
+    <div className={`${isDark ? 'dark' : ''} font-sans-serif text-sm`}>
       <div className=' dark:bg-black-400 w-screen h-screen transition-all duration-500'>
         <Head>
           <title>Dictionary</title>
           <link rel="icon" href="/images/logo.svg" />
         </Head>
-        <main className="max-w-3xl mx-auto pt-9">
+        <div className="flex flex-col max-w-3xl mx-auto pt-9">
           <div id='toolbar' className='flex w-full justify-between '>
             <Logo />
             <div className='flex flex-row'>
-              <div className='flex justify-center items-center'>
-                <span className='font-bold px-2 text-light-primary text-black-200 dark:text-white transition-all duration-500'>Sans Serif</span>
-                <div className="px-2">
-                  <ArrowIcon />
-                </div>
-              </div>
+              <FontSwitch />
               <div id='vertical-divider' className='border-r border-gray mx-5 h-8' />
               <div className='flex items-center'>
                 <ToggleSwitch />
@@ -35,7 +31,11 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-        </main>
+          <div>
+          </div>
+          <h1>header</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolores itaque dicta aliquam numquam officiis, esse quasi nesciunt hic rem facere molestiae quod dolor excepturi, odio voluptates veritatis eaque at.</p>
+        </div>
       </div>
     </div>
   )
