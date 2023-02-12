@@ -6,37 +6,37 @@
   @font-face {
     font-family: Inconsolata;
     font-weight: bold;
-    src: url("../public/fonts/Inconsolata-Bold.ttf");
+    src: url("/fonts/Inconsolata-Bold.ttf");
   }
   @font-face {
     font-family: Inconsolata;
     font-weight: normal;
-    src: url("../public/fonts/Inconsolata-Regular.ttf");
+    src: url("/fonts/Inconsolata-Regular.ttf");
   }
   @font-face {
     font-family: Inter;
     font-weight: bold;
-    src: url("../public/fonts/Inter-Bold.ttf");
+    src: url("/fonts/Inter-Bold.ttf");
   }
   @font-face {
     font-family: Inter;
     font-weight: normal;
-    src: url("../public/fonts/Inter-Regular.ttf");
+    src: url("/fonts/Inter-Regular.ttf");
   }
   @font-face {
     font-family: Lora;
     font-weight: bold;
-    src: url("../public/fonts/Lora-Bold.ttf");
+    src: url("/fonts/Lora-Bold.ttf");
   }
   @font-face {
     font-family: Lora;
     font-weight: bold;
     font-style: italic;
-    src: url("../public/fonts/Lora-BoldItalic.ttf");
+    src: url("/fonts/Lora-BoldItalic.ttf");
   }
   @font-face {
     font-family: Lora;
     font-weight: normal;
-    src: url("../public/fonts/Lora-Regular.ttf");
+    src: url("/fonts/Lora-Regular.ttf");
   }
 }

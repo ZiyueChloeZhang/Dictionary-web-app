@@ -31,13 +31,14 @@ module.exports = {
       xl: ["64px", { lineHeight: "77px" }],
     },
     fontFamily: {
-      mono: "Inconsolata",
-      "sans-serif": "Inter",
-      serif: "Lora",
+      mono: ["Inconsolata"],
+      "sans-serif": ["Inter"],
+      serif: ["Lora"],
     },
     boxShadow: {
-      sm: '0 5px 30px rgba(0, 0, 0, 0.1)',
-    }
+      sm: "0 5px 30px rgba(0, 0, 0, 0.1)",
+    },
+    extend: {},
   },
   plugins: [],
 };
