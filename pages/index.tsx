@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   const { fontName } = useContext(FontContext);
 
   return (
-    <div className={`${isDark ? 'dark' : ''} font-${fontName} text-sm`}>
+    <div className={`${isDark ? 'dark' : ''} font-serif text-sm`}>
       <div className=' dark:bg-black-400 w-screen h-screen transition-all duration-500'>
         <Head>
           <title>Dictionary</title>
