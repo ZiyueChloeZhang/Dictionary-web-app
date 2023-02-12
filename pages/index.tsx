@@ -4,12 +4,10 @@ import Logo from '../public/images/logo.svg';
 import ArrowIcon from '../public/images/icon-arrow-down.svg';
 import Moon from '../public/images/icon-moon.svg';
 import ToggleSwitch from '../components/ThemeToggle';
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import ThemeContext from '../contexts/ThemeContext';
 import FontSwitch from '../components/FontSwitch';
 import FontContext from '../contexts/FontContext';
-import { kebabCase } from "lodash";
-import localFont from '@next/font/local';
 
 const Home: NextPage = () => {
   const { isDark } = useContext(ThemeContext);
