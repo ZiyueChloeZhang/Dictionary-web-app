@@ -15,8 +15,10 @@ const Home: NextPage = () => {
   const { isDark } = useContext(ThemeContext);
   const { fontName } = useContext(FontContext);
 
+  const fontNameStyle = React.useMemo(()=>kebabCase(fontName), [fontName]);
+
   return (
-      <div className={`${isDark ? 'dark' : ''} font-${kebabCase(fontName)} text-sm`}>
+      <div className={`${isDark ? 'dark' : ''} font-${fontNameStyle} text-sm`}>
         <div className=' dark:bg-black-400 w-screen h-screen transition-all duration-500'>
           <Head>
             <title>Dictionary</title>
