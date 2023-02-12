@@ -30,11 +30,6 @@ module.exports = {
       lg: ["24px", { lineHeight: "29px" }],
       xl: ["64px", { lineHeight: "77px" }],
     },
-    fontFamily: {
-      mono: ["Inconsolata"],
-      "sans-serif": ["Inter"],
-      serif: ["Lora"],
-    },
     boxShadow: {
       sm: "0 5px 30px rgba(0, 0, 0, 0.1)",
     },

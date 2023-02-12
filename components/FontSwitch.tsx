@@ -32,7 +32,7 @@ const FontSwitch: FC = () => {
                         <Menu.Item key={name}>
                             {({ active }) => (
                                 <div className="text-black-200 dark:text-white">
-                                    <button className={`${active && 'text-purple'} block py-2 text-sm font-sans-serif font-bold`}
+                                    <button className={`${active && 'text-purple'} block py-2 text-sm font-${name} font-bold`}
                                         name={name}
                                         onClick={handleClick}
                                     >
