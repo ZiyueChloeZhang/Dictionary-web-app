@@ -17,7 +17,7 @@ const FontSwitch: FC = () => {
         <Menu as='div' className="inline-block text-left self-center z-10">
             <div>
                 <Menu.Button className='inline-flex w-full justify-center items-center'>
-                    <span className='font-bold px-2 text-light-primary text-black-200 dark:text-white transition-all duration-500'>{fontName}</span>
+                    <span className='font-bold px-2 text-light-primary text-black-200 dark:text-white'>{fontName}</span>
                     <div className="px-2">
                         <ArrowIcon />
                     </div>
