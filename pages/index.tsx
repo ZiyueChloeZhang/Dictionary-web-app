@@ -8,6 +8,9 @@ import ThemeContext from '../contexts/ThemeContext';
 import FontSwitch from '../components/FontSwitch';
 import FontContext, { fontStyles } from '../contexts/FontContext';
 import SearchBar from '../components/SearchBar';
+import PlayIcon from '../components/PlayIcon';
+import DefinitionSection from '../components/DefinitionSection';
+import NewWindowIcon from '../public/images/icon-new-window.svg';
 
 
 const Home: NextPage = () => {
@@ -16,7 +19,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={`${isDark ? 'dark' : ''} ${fontStyles[fontName]} text-sm`}>
-      <div className=' dark:bg-black-400 w-screen h-screen text-black-200 dark:text-white'>
+      <div className=' dark:bg-black-400  text-black-200 dark:text-white pb-20'>
         <Head>
           <title>Dictionary</title>
           <link rel="icon" href="/images/logo.svg" />
@@ -33,10 +36,32 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className='my-[45px]'>
+          <div id='search-bar' className='my-[45px]'>
             <SearchBar />
           </div>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cupiditate veritatis eaque maiores harum modi repudiandae. Labore, dolore, saepe unde, fuga id eligendi vero harum modi itaque ad inventore eaque.</h2>
+          <div className="flex flex-col gap-10">
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="font-bold text-xl">keyboard</div>
+                <div className="h-2" />
+                <div className="text-purple">/ˈkiːbɔːd/</div>
+              </div>
+              <PlayIcon />
+            </div>
+            <DefinitionSection />
+            <DefinitionSection />
+            <DefinitionSection />
+            <footer>
+              <div className="h-[1px] bg-gray-200 w-full mb-5" />
+              <div className="flex flex-row items-center text-xs w-full">
+                <div className="text-gray-300 pr-5">Source</div>
+                <a className="underline " href='https://en.wiktionary.org/wiki/keyboard'>https://en.wiktionary.org/wiki/keyboard</a>
+                <div className="pl-[9px]" >
+                  <NewWindowIcon />
+                </div>
+              </div>
+            </footer>
+          </div>
           <div>
           </div>
         </div>
