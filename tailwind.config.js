@@ -4,7 +4,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./contexts/**/*.{js,ts,jsx,tsx}"
+    "./contexts/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
   theme: {
@@ -38,6 +38,11 @@ module.exports = {
     },
     boxShadow: {
       sm: "0 5px 30px rgba(0, 0, 0, 0.1)",
+    },
+    screens: {
+      mobile: "375px",
+      tablet: "768px",
+      desktop: "1440px",
     },
   },
   plugins: [],
