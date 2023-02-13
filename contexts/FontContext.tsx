@@ -3,13 +3,19 @@ import { createContext, FC, useState } from "react";
 export const FontNames = ["sans", "serif", "mono"] as const;
 export type FontName = typeof FontNames[number];
 
+export const fontStyles = {
+    sans: 'font-sans',
+    serif: 'font-serif',
+    mono: 'font-mono'
+};
+
 interface IFontContext {
     fontName: FontName,
     switchFont: (name: FontName) => void
 }
 
 const defaultFont: IFontContext = {
-    fontName: "sans",
+    fontName: "mono",
     switchFont: (name: FontName) => { }
 } as const;
 
