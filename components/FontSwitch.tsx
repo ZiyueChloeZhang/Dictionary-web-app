@@ -2,7 +2,6 @@ import { FC, useContext } from "react";
 import FontContext, { FontName, FontNames, fontStyles } from "../contexts/FontContext";
 import ArrowIcon from '../public/images/icon-arrow-down.svg';
 import { Menu } from '@headlessui/react';
-import { kebabCase } from "lodash";
 import React from "react";
 
 const FontSwitch: FC = () => {
