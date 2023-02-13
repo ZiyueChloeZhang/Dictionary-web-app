@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={`${isDark ? 'dark' : ''} ${fontStyles[fontName]} text-sm`}>
-      <div className=' dark:bg-black-400 w-screen h-screen'>
+      <div className=' dark:bg-black-400 w-screen h-screen text-black-200 dark:text-white'>
         <Head>
           <title>Dictionary</title>
           <link rel="icon" href="/images/logo.svg" />
@@ -36,6 +36,7 @@ const Home: NextPage = () => {
           <div className='my-[45px]'>
             <SearchBar />
           </div>
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cupiditate veritatis eaque maiores harum modi repudiandae. Labore, dolore, saepe unde, fuga id eligendi vero harum modi itaque ad inventore eaque.</h2>
           <div>
           </div>
         </div>
