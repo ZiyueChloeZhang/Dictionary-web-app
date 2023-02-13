@@ -33,7 +33,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className='my-[45px]'>
             <SearchBar />
           </div>
           <div>
