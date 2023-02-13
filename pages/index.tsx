@@ -7,14 +7,15 @@ import ToggleSwitch from '../components/ThemeToggle';
 import React, { useContext } from 'react';
 import ThemeContext from '../contexts/ThemeContext';
 import FontSwitch from '../components/FontSwitch';
-import FontContext from '../contexts/FontContext';
+import FontContext, { fontStyles } from '../contexts/FontContext';
+
 
 const Home: NextPage = () => {
   const { isDark } = useContext(ThemeContext);
   const { fontName } = useContext(FontContext);
 
   return (
-    <div className={`${isDark ? 'dark' : ''} font-serif text-sm`}>
+    <div className={`${isDark ? 'dark' : ''} ${fontStyles[fontName]} text-sm`}>
       <div className=' dark:bg-black-400 w-screen h-screen transition-all duration-500'>
         <Head>
           <title>Dictionary</title>
