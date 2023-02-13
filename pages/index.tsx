@@ -8,6 +8,7 @@ import ThemeContext from '../contexts/ThemeContext';
 import FontSwitch from '../components/FontSwitch';
 import FontContext, { fontStyles } from '../contexts/FontContext';
 import SearchBar from '../components/SearchBar';
+import PlayIcon from '../components/PlayIcon';
 
 
 const Home: NextPage = () => {
@@ -33,10 +34,17 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className='my-[45px]'>
+          <div id='search-bar' className='my-[45px]'>
             <SearchBar />
           </div>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cupiditate veritatis eaque maiores harum modi repudiandae. Labore, dolore, saepe unde, fuga id eligendi vero harum modi itaque ad inventore eaque.</h2>
+          <div className="flex justify-between items-center">
+            <div>
+              <div className="font-bold text-xl">keyboard</div>
+              <div className="h-2" />
+              <div className="text-purple">/ˈkiːbɔːd/</div>
+            </div>
+            <PlayIcon />
+          </div>
           <div>
           </div>
         </div>
