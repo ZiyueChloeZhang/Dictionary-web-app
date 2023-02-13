@@ -2,7 +2,6 @@ import { FC, useContext } from "react";
 import FontContext, { FontName, FontNames, fontStyles } from "../contexts/FontContext";
 import ArrowIcon from '../public/images/icon-arrow-down.svg';
 import { Menu } from '@headlessui/react';
-import { kebabCase } from "lodash";
 import React from "react";
 
 const FontSwitch: FC = () => {
@@ -33,7 +32,7 @@ const FontSwitch: FC = () => {
                             {({ active }) => (
                                 <div className="text-black-200 dark:text-white">
                                     <button className={`${active && 'text-purple'} block py-2 text-sm ${fontStyles[name]} font-bold`}
-                                        name={name}
+                     name={name}
                                         onClick={handleClick}
                                     >
                                         {name}

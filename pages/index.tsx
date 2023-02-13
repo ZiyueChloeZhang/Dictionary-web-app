@@ -32,6 +32,10 @@ const Home: NextPage = () => {
                 <Moon className={`ml-5 dark:text-purple text-gray-300`} />
               </div>
             </div>
+            <div>
+            </div>
+            <h1>header</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolores itaque dicta aliquam numquam officiis, esse quasi nesciunt hic rem facere molestiae quod dolor excepturi, odio voluptates veritatis eaque at.</p>
           </div>
           <div>
           </div>
@@ -39,7 +43,6 @@ const Home: NextPage = () => {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolores itaque dicta aliquam numquam officiis, esse quasi nesciunt hic rem facere molestiae quod dolor excepturi, odio voluptates veritatis eaque at.</p>
         </div>
       </div>
-    </div>
   )
 }
 
