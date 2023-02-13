@@ -16,13 +16,13 @@ const SearchBar: FC = () => {
             setIsEmpty(true);
             return;
         }
-        
+
         setIsEmpty(false);
     }
 
     return (
         <>
-            <div className={`flex justify-between items-center px-6 py-5 rounded-2xl bg-gray-100 dark:bg-black-300 ${isEmpty ? 'border-red border' : 'hover:border-purple hover:border'}`}>
+            <div className={`flex justify-between items-center px-6 py-5 rounded-2xl bg-gray-100 dark:bg-black-300 border ${isEmpty ? 'border-red' : 'border-gray-100 dark:border-black-300 hover:border-purple dark:hover:border-purple'}`}>
                 <label htmlFor='input' />
                 <input
                     id="input"
