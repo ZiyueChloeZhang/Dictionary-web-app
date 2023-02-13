@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={`${isDark ? 'dark' : ''} ${fontStyles[fontName]} text-sm`}>
-      <div className=' dark:bg-black-400 w-screen h-screen text-black-200 dark:text-white'>
+      <div className=' dark:bg-black-400  text-black-200 dark:text-white pb-20'>
         <Head>
           <title>Dictionary</title>
           <link rel="icon" href="/images/logo.svg" />
@@ -48,6 +48,7 @@ const Home: NextPage = () => {
               </div>
               <PlayIcon />
             </div>
+            <DefinitionSection />
             <DefinitionSection />
             <DefinitionSection />
             <footer>
