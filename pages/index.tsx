@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Logo from '../public/images/logo.svg';
-import ArrowIcon from '../public/images/icon-arrow-down.svg';
 import Moon from '../public/images/icon-moon.svg';
 import ToggleSwitch from '../components/ThemeToggle';
 import React, { useContext } from 'react';
 import ThemeContext from '../contexts/ThemeContext';
 import FontSwitch from '../components/FontSwitch';
 import FontContext, { fontStyles } from '../contexts/FontContext';
+import SearchBar from '../components/SearchBar';
 
 
 const Home: NextPage = () => {
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={`${isDark ? 'dark' : ''} ${fontStyles[fontName]} text-sm`}>
-      <div className=' dark:bg-black-400 w-screen h-screen transition-all duration-500'>
+      <div className=' dark:bg-black-400 w-screen h-screen text-black-200 dark:text-white'>
         <Head>
           <title>Dictionary</title>
           <link rel="icon" href="/images/logo.svg" />
@@ -33,10 +33,12 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
+          <div className='my-[45px]'>
+            <SearchBar />
+          </div>
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cupiditate veritatis eaque maiores harum modi repudiandae. Labore, dolore, saepe unde, fuga id eligendi vero harum modi itaque ad inventore eaque.</h2>
           <div>
           </div>
-          <h1>header</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolores itaque dicta aliquam numquam officiis, esse quasi nesciunt hic rem facere molestiae quod dolor excepturi, odio voluptates veritatis eaque at.</p>
         </div>
       </div>
     </div>
