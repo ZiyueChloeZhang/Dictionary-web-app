@@ -7,7 +7,7 @@ export const fontStyles = {
     sans: 'font-sans',
     serif: 'font-serif',
     mono: 'font-mono'
-};
+} as const;
 
 interface IFontContext {
     fontName: FontName,
@@ -15,7 +15,7 @@ interface IFontContext {
 }
 
 const defaultFont: IFontContext = {
-    fontName: "mono",
+    fontName: "sans",
     switchFont: (name: FontName) => { }
 } as const;
 
