@@ -9,6 +9,8 @@ import FontSwitch from '../components/FontSwitch';
 import FontContext, { fontStyles } from '../contexts/FontContext';
 import SearchBar from '../components/SearchBar';
 import PlayIcon from '../components/PlayIcon';
+import DefinitionSection from '../components/DefinitionSection';
+import NewWindowIcon from '../public/images/icon-new-window.svg';
 
 
 const Home: NextPage = () => {
@@ -37,13 +39,27 @@ const Home: NextPage = () => {
           <div id='search-bar' className='my-[45px]'>
             <SearchBar />
           </div>
-          <div className="flex justify-between items-center">
-            <div>
-              <div className="font-bold text-xl">keyboard</div>
-              <div className="h-2" />
-              <div className="text-purple">/ˈkiːbɔːd/</div>
+          <div className="flex flex-col gap-10">
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="font-bold text-xl">keyboard</div>
+                <div className="h-2" />
+                <div className="text-purple">/ˈkiːbɔːd/</div>
+              </div>
+              <PlayIcon />
             </div>
-            <PlayIcon />
+            <DefinitionSection />
+            <DefinitionSection />
+            <footer>
+              <div className="h-[1px] bg-gray-200 w-full mb-5" />
+              <div className="flex flex-row items-center text-xs w-full">
+                <div className="text-gray-300 pr-5">Source</div>
+                <a className="underline " href='https://en.wiktionary.org/wiki/keyboard'>https://en.wiktionary.org/wiki/keyboard</a>
+                <div className="pl-[9px]" >
+                  <NewWindowIcon />
+                </div>
+              </div>
+            </footer>
           </div>
           <div>
           </div>
