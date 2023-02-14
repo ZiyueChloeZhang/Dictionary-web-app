@@ -33,13 +33,13 @@ const MeaningSection: FC<{ meaning: Meaning }> = ({ meaning }) => {
                 {(synonyms.length > 0) && (
                     <div className="flex flex-row items-start gap-[22px]">
                         <div className="text-md text-gray-300">Synonyms</div>
-                        <div className="text-purple font-bold">{synonyms.map((word) => (<span>{word} </span>))}</div>
+                        <div className="text-purple font-bold">{synonyms.map((word: string) => (<span>{word} </span>))}</div>
                     </div>)
                 }
                 {(antonyms.length > 0) && (
                     <div className="flex flex-row items-center gap-[22px]">
                         <div className="text-md text-gray-300">Antonyms</div>
-                        <div className="text-purple font-bold">{antonyms.map((word) => (<span>{word} </span>))}</div>
+                        <div className="text-purple font-bold">{antonyms.map((word: string) => (<span>{word} </span>))}</div>
                     </div>)
                 }
             </div>
