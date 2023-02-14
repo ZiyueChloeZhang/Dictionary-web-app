@@ -1,12 +1,12 @@
-import React from "react";
-import { FC } from "react";
+import { FC, useContext, useState, KeyboardEvent } from "react";
+import { DictionaryContext } from "../contexts/DictionaryContext";
 import SearchIcon from '../public/images/icon-search.svg';
 
 const SearchBar: FC = () => {
-    const error = false;
-    const [isEmpty, setIsEmpty] = React.useState<boolean>(false);
+    const { searchWord } = useContext(DictionaryContext);
+    const [isEmpty, setIsEmpty] = useState<boolean>(false);
 
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
         if (event.key !== 'Enter') return;
         const inputElement: HTMLInputElement = event.currentTarget;
         const inputString: string = inputElement.value;
@@ -17,6 +17,7 @@ const SearchBar: FC = () => {
             return;
         }
         setIsEmpty(false);
+        searchWord(inputString);
     }
 
     return (
