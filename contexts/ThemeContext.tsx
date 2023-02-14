@@ -13,11 +13,11 @@ const ThemeContext = React.createContext<IThemeContext>(defaultTheme);
 export default ThemeContext;
 
 
-interface IThemeProviderProp {
+export interface ContextProviderProp {
     children?: React.ReactNode
 };
 
-export const ThemeProvider: FC<IThemeProviderProp> = ({ children }) => {
+export const ThemeProvider: FC<ContextProviderProp> = ({ children }) => {
     const [isDark, setIsDark] = useState(defaultTheme.isDark);
 
     const toggleTheme = () => {
