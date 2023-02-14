@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Meaning } from "../contexts/DictionaryContext";
+import { Definition, Meaning } from "../contexts/DictionaryContext";
 
 const texts = [
     "(etc.) A set of keys used to operate a typewriter, computer etc.",
@@ -20,7 +20,7 @@ const MeaningSection: FC<{ meaning: Meaning }> = ({ meaning }) => {
                 <div className="text-md text-gray-300">Meaning</div>
                 <ul className="flex flex-col gap-[13px] pl-5 list-disc list-outside">
                     {
-                        definitions.map((definition) => (
+                        definitions.map((definition: Definition) => (
                             <li className="text-purple ml-3 pl-2 ">
                                 <div className="text-black-200 dark:text-white text-sm">{definition.definition}</div>
                                 {definition.example && (<div className="text-gray-300 text-sm pt-[13px]">"{definition.example}"</div>)}

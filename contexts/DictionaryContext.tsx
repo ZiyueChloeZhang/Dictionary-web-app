@@ -6,6 +6,7 @@ const Definition = z.object({
     definition: z.string(),
     example: z.string().optional()
 })
+export type Definition = z.infer<typeof Definition>
 
 const Meaning = z.object({
     partOfSpeech: z.string(),
