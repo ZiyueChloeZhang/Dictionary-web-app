@@ -21,9 +21,9 @@ const Dictionary: FC = () => {
                     <div>
                         <div className="font-bold text-xl">{word}</div>
                         <div className="h-2" />
-                        <div className="text-purple">{phonetic || ''}</div>
+                        <div className="text-purple">{phonetic || phonetics.find(phonetic => phonetic.text)?.text || ""}</div>
                     </div>
-                    <PlayIcon />
+                    <PlayIcon audioUrl={phonetics.find(phonetic => phonetic.audio)?.audio}/>
                 </div>
                 {meanings.map((meaning: Meaning) => (<MeaningSection meaning={meaning} />))}
                 <footer>

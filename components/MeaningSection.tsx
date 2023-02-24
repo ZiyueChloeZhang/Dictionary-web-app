@@ -1,13 +1,6 @@
 import { FC } from "react";
 import { Definition, Meaning } from "../contexts/DictionaryContext";
 
-const texts = [
-    "(etc.) A set of keys used to operate a typewriter, computer etc.",
-    "A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.",
-    "A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device."
-]
-
-
 const MeaningSection: FC<{ meaning: Meaning }> = ({ meaning }) => {
     const { antonyms, definitions, partOfSpeech, synonyms } = meaning;
     return (
