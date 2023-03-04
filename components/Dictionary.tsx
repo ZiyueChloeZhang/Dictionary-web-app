@@ -9,8 +9,8 @@ const Dictionary: FC = () => {
 
     if (status === 'idle') return <></>;
     if (status === 'failure') return <div>error message</div>;
-
-    if (!dictionary) return <NotFound/>;
+    if (status === 'success' && !dictionary) return <NotFound />;
+    if (!dictionary) return <></>;
 
     const { word, meanings, phonetics, phonetic, sourceUrls } = dictionary;
 
@@ -23,7 +23,7 @@ const Dictionary: FC = () => {
                         <div className="h-2" />
                         <div className="text-purple">{phonetic || phonetics.find(phonetic => phonetic.text)?.text || ""}</div>
                     </div>
-                    <PlayIcon audioUrl={phonetics.find(phonetic => phonetic.audio)?.audio}/>
+                    <PlayIcon audioUrl={phonetics.find(phonetic => phonetic.audio)?.audio} />
                 </div>
                 {meanings.map((meaning: Meaning) => (<MeaningSection meaning={meaning} />))}
                 <footer>
