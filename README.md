@@ -1,27 +1,44 @@
-# Next.js + Tailwind CSS Example
+# Frontend Mentor - Dictionary web app solution
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This is a solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Deploy your own
+## Overview
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+### The challenge
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+Users should be able to:
 
-## How to use
+- Search for words using the input field
+- See the Free Dictionary API's response for the searched word
+- See a form validation message when trying to submit a blank form
+- Play the audio file for a word when it's available
+- Switch between serif, sans serif, and monospace fonts
+- Switch between light and dark themes
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+### Screenshot
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+<img src="./screenshots/desktop.png"  height="500">
+<img src="./screenshots/tablet.png"  height="500" >
+<img src="./screenshots/mobile.png"  height="500" >
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+### Links
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- Solution URL: [Dictionary-web-app](https://github.com/ZiyueChloeZhang/Dictionary-web-app)
+- Live Site URL: [Dictionary](https://dictionary-web-app-cz.vercel.app/)
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## My process
+
+### Built with
+
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - For styles
+- TypeScript
+
+### What I Enjoyed Learning:
+
+- Typing with React. More specifically typing by inference. I used [zod](https://zod.dev/?id=introduction) ( schema declaration and validation library) to parse the data coming back from the API to inference the type.
+- Using `useContext` for state management. Avoided messy prop drillings without extra library such as Redux.
+- Getting rid of random classNames for styling purposes. First time trying [Tailwind](https://tailwindcss.com/) and I feel like I will never go back.
