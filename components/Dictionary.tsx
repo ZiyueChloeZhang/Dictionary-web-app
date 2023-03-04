@@ -1,6 +1,7 @@
 import { FC, useContext } from "react";
 import { DictionaryContext, Meaning } from "../contexts/DictionaryContext";
 import MeaningSection from "./MeaningSection";
+import NotFound from "./NotFound";
 import PlayIcon from "./PlayIcon";
 
 const Dictionary: FC = () => {
@@ -8,9 +9,8 @@ const Dictionary: FC = () => {
 
     if (status === 'idle') return <></>;
     if (status === 'failure') return <div>error message</div>;
-    if (status === 'loading') return <div>loading</div>;
 
-    if (!dictionary) return <div>no result</div>;
+    if (!dictionary) return <NotFound/>;
 
     const { word, meanings, phonetics, phonetic, sourceUrls } = dictionary;
 
