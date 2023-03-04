@@ -1,11 +1,15 @@
-import { FC, useContext, useState, KeyboardEvent } from "react";
+import { FC, useContext, useState, KeyboardEvent, useEffect } from "react";
 import { DictionaryContext } from "../contexts/DictionaryContext";
 import SearchIcon from '../public/images/icon-search.svg';
 
 const SearchBar: FC = () => {
-    const { searchWord } = useContext(DictionaryContext);
+    const { dictionary, searchWord } = useContext(DictionaryContext);
     const [isEmpty, setIsEmpty] = useState<boolean>(false);
+    const [inputValue, setInputValue] = useState<string>("");
 
+    useEffect(() => {
+        dictionary && setInputValue(dictionary.word);
+    }, [dictionary])
     const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
         if (event.key !== 'Enter') return;
         const inputElement: HTMLInputElement = event.currentTarget;
@@ -26,8 +30,10 @@ const SearchBar: FC = () => {
                 <label htmlFor='input' />
                 <input
                     id="input"
+                    value={inputValue}
                     className={`flex-1 font-bold bg-gray-100 dark:bg-black-300 dark:text-white placeholder:opacity-25 dark:placeholder:text-white border-none focus-visible:outline-none`}
                     placeholder="Search for any word..."
+                    onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={handleKeyDown} />
                 <div className="pl-6">
                     <SearchIcon />
@@ -38,5 +44,7 @@ const SearchBar: FC = () => {
     );
 
 }
+
+
 
 export default SearchBar;

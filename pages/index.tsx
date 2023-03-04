@@ -9,6 +9,7 @@ import FontContext, { fontStyles } from '../contexts/FontContext';
 import SearchBar from '../components/SearchBar';
 import { DictionaryProvider } from '../contexts/DictionaryContext';
 import Dictionary from '../components/Dictionary';
+import Main from '../components/Main';
 
 const Home: NextPage = () => {
     const { isDark } = useContext(ThemeContext);
@@ -40,10 +41,7 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                     <DictionaryProvider>
-                        <div id='search-bar' className='my-[45px]'>
-                            <SearchBar />
-                        </div>
-                        <Dictionary />
+                        <Main />
                     </DictionaryProvider>
                     <div>
                     </div>
