@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { createContext, FC, useState } from 'react';
+import { createContext, FC, useEffect, useState } from 'react';
 import { ContextProviderProp } from './ThemeContext';
 
 const Definition = z.object({
@@ -51,6 +51,11 @@ export const DictionaryContext = createContext<IDictionaryContext>(defaultDictio
 export const DictionaryProvider: FC<ContextProviderProp> = ({ children }) => {
     const [status, setStatus] = useState<APIStatus>("idle");
     const [dictionary, setDictionary] = useState<Dictionary>(null);
+
+    useEffect(() => {
+        searchWord("Dictionary");
+    }, [])
+
 
     const searchWord = async (word: string) => {
         setStatus("loading");
