@@ -21,9 +21,9 @@ const Dictionary: FC = () => {
             <div className="flex flex-col gap-10">
                 <div className="flex justify-between items-center">
                     <div>
-                        <div className="font-bold text-xl">{word}</div>
+                        <div className="font-bold text-xl mobile:text-[32px] mobile:leading-[38.73px] tablet:text-xl">{word}</div>
                         <div className="h-2" />
-                        <div className="text-purple font-sans">{phonetic || phonetics.find(phonetic => phonetic.text)?.text || ""}</div>
+                        <div className="text-purple font-sans tablet:text-lg">{phonetic || phonetics.find(phonetic => phonetic.text)?.text || ""}</div>
                     </div>
                     <PlayIcon audioUrl={phonetics.find(phonetic => phonetic.audio)?.audio} />
                 </div>

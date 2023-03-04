@@ -26,12 +26,12 @@ const SearchBar: FC = () => {
 
     return (
         <>
-            <div className={`flex justify-between items-center px-6 py-5 rounded-2xl bg-gray-100 dark:bg-black-300 border ${isEmpty ? 'border-red' : 'border-gray-100 dark:border-black-300 hover:border-purple dark:hover:border-purple'}`}>
+            <div className={`flex justify-between items-center px-6 py-5 rounded-2xl mobile:h-6 tablet:h-16 bg-gray-100 dark:bg-black-300 border ${isEmpty ? 'border-red' : 'border-gray-100 dark:border-black-300 hover:border-purple dark:hover:border-purple'}`}>
                 <label htmlFor='input' />
                 <input
                     id="input"
                     value={inputValue}
-                    className={`flex-1 font-bold bg-gray-100 dark:bg-black-300 dark:text-white placeholder:opacity-25 dark:placeholder:text-white border-none focus-visible:outline-none`}
+                    className={`flex-1 font-bold bg-gray-100 dark:bg-black-300 dark:text-white placeholder:opacity-25 dark:placeholder:text-white border-none focus-visible:outline-none mobile:text-[16px]ß leading-[19.36px]`}
                     placeholder="Search for any word..."
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={handleKeyDown} />
