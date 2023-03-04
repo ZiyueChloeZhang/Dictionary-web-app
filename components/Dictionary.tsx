@@ -1,11 +1,13 @@
 import { FC, useContext } from "react";
 import { DictionaryContext, Meaning } from "../contexts/DictionaryContext";
+import FontContext from "../contexts/FontContext";
 import MeaningSection from "./MeaningSection";
 import NotFound from "./NotFound";
 import PlayIcon from "./PlayIcon";
 
 const Dictionary: FC = () => {
     const { dictionary, status } = useContext(DictionaryContext);
+    const { fontName } = useContext(FontContext);
 
     if (status === 'idle') return <></>;
     if (status === 'failure') return <div className="text-[64px] leading-[75px]">Something went wrong, please try again.</div>;
@@ -21,7 +23,7 @@ const Dictionary: FC = () => {
                     <div>
                         <div className="font-bold text-xl">{word}</div>
                         <div className="h-2" />
-                        <div className="text-purple">{phonetic || phonetics.find(phonetic => phonetic.text)?.text || ""}</div>
+                        <div className="text-purple font-sans">{phonetic || phonetics.find(phonetic => phonetic.text)?.text || ""}</div>
                     </div>
                     <PlayIcon audioUrl={phonetics.find(phonetic => phonetic.audio)?.audio} />
                 </div>

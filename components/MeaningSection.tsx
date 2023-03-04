@@ -1,13 +1,15 @@
 import { FC, useContext } from "react";
 import { Definition, DictionaryContext, Meaning } from "../contexts/DictionaryContext";
+import FontContext from "../contexts/FontContext";
 
 const MeaningSection: FC<{ meaning: Meaning }> = ({ meaning }) => {
     const { antonyms, definitions, partOfSpeech, synonyms } = meaning;
     const { searchWord } = useContext(DictionaryContext);
+    const { fontName } = useContext(FontContext);
     return (
         <div className="flex flex-col gap-10">
             <div className="flex flex-row w-full items-center">
-                <span className="inline-block font-bold italic text-lg">{partOfSpeech}</span>
+                <span className={`inline-block font-bold ${(fontName === "sans") && "italic"} text-lg ${(fontName === "serif") && 'font-sans font-normal'}`}>{partOfSpeech}</span>
                 <div className="ml-5 h-[1px] bg-gray-200 flex-1" />
             </div>
             <div className="flex flex-col gap-5">
