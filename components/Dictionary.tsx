@@ -8,7 +8,7 @@ const Dictionary: FC = () => {
     const { dictionary, status } = useContext(DictionaryContext);
 
     if (status === 'idle') return <></>;
-    if (status === 'failure') return <div>error message</div>;
+    if (status === 'failure') return <div className="text-[64px] leading-[75px]">Something went wrong, please try again.</div>;
     if (status === 'success' && !dictionary) return <NotFound />;
     if (!dictionary) return <></>;
 
